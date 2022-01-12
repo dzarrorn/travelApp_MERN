@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import Button from "./index";
 import { BrowserRouter as Router } from "react-router-dom";
 
-test("Should not allowed click button is isDisabled is present", () => {
+test("Should not allowed click button is isDisabled is resent", () => {
   const { container } = render(<Button isDisabled></Button>);
 
   expect(container.querySelector("span.disabled")).toBeInTheDocument();
