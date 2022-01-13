@@ -11,7 +11,7 @@ export default function Button(props) {
   if (props.hasShadow) className.push("btn-shadow");
 
   const onClick = () => {
-    if (props.onclick) props.onclick();
+    if (props.onClick) props.onClick();
   };
 
   if (props.isDisabled || props.isLoading) {
@@ -38,7 +38,7 @@ export default function Button(props) {
           className={className.join(" ")}
           style={props.style}
           target={props.target === "_blank" ? "_blank" : undefined}
-          rel={props.target === "noopener noreferrer" ? "_blank" : undefined}
+          rel={props.target === "_blank" ? "noopener noreferrer" : undefined}
         >
           {props.children}
         </a>
@@ -76,6 +76,7 @@ Button.propTypes = {
   target: propTypes.string,
   className: propTypes.string,
   isExternal: propTypes.bool,
+  isPrimary: propTypes.bool,
   isDisabled: propTypes.bool,
   isLoading: propTypes.bool,
   isSmall: propTypes.bool,
