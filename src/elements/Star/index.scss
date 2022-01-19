@@ -10,11 +10,11 @@
     mask: url(../../assets/images/icons/star.svg) no-repeat center left;
     &:not(.placeholder) {
       z-index: 2;
-      background-color: $yellow;
+      background-color: blue;
     }
     &.placeholder {
       z-index: 1;
-      background-color: $gray-200;
+      background-color: red;
     }
   }
 }
